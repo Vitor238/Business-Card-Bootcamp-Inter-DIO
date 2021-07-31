@@ -9,7 +9,7 @@ android {
 
     defaultConfig {
         applicationId "br.com.dio.businesscard"
-        minSdk 16
+        minSdk 21
         targetSdk 30
         versionCode 1
         versionName "1.0"
