@@ -21,9 +21,9 @@ class MainViewModel(private val businessCardRepository: BusinessCardRepository) 
 class MainViewModelFactory(private val repository: BusinessCardRepository) :
     ViewModelProvider.Factory {
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
-        if (modelClass.isAssignableFrom(MainViewModelFactory::class.java)) {
+        if (modelClass.isAssignableFrom(MainViewModel::class.java)) {
             @Suppress("UNCHECKED_CAST")
-            return MainViewModelFactory(repository) as T
+            return MainViewModel(repository) as T
         } else {
             throw IllegalArgumentException("Unknown ViewModel class")
         }
