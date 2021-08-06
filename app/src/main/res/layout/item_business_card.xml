@@ -12,8 +12,9 @@
         android:layout_margin="16dp"
         android:checkable="true"
         android:clickable="true"
-        android:elevation="8dp"
+        app:cardElevation="8dp"
         android:focusable="true"
+        app:cardPreventCornerOverlap="true"
         app:cardCornerRadius="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintDimensionRatio="16:9"
@@ -24,7 +25,7 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="16dp">
+            android:padding="16dp">
 
             <com.google.android.material.textview.MaterialTextView
                 android:id="@+id/tv_name"
