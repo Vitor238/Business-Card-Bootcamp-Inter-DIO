@@ -8,6 +8,7 @@ import br.com.dio.businesscard.App
 import br.com.dio.businesscard.databinding.ActivityMainBinding
 import br.com.dio.businesscard.util.Image
 
+
 class MainActivity : AppCompatActivity() {
 
     private val binding by lazy { ActivityMainBinding.inflate(layoutInflater) }
