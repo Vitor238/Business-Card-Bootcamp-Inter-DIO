@@ -15,8 +15,7 @@
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/toolbar_height"
-            app:title="@null">
+            style="@style/ToolbarStyle">
 
             <TextView
                 android:id="@+id/tv_title"
