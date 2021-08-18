@@ -5,8 +5,10 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import br.com.dio.businesscard.App
+import br.com.dio.businesscard.R
 import br.com.dio.businesscard.databinding.ActivityMainBinding
 import br.com.dio.businesscard.util.Image
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 
 class MainActivity : AppCompatActivity() {
@@ -31,7 +33,17 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         adapter.listenerShare = { card ->
-            Image.share(this@MainActivity, card)
+
+            val dialog = MaterialAlertDialogBuilder(this)
+                .setTitle(resources.getString(R.string.label_share_business_card))
+                .setNegativeButton(resources.getString(R.string.label_cancel)) { dialog, which ->
+                    dialog.dismiss()
+                }
+                .setPositiveButton(resources.getString(R.string.label_share)) { dialog, which ->
+                    Image.share(this@MainActivity, card)
+                }
+
+            dialog.show()
         }
     }
 
