@@ -2,6 +2,7 @@ package br.com.dio.businesscard.ui
 
 import android.content.DialogInterface
 import android.os.Bundle
+import android.telephony.PhoneNumberFormattingTextWatcher
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.annotation.StringRes
@@ -54,6 +55,8 @@ class AddBusinessCardActivity : AppCompatActivity() {
             builder.colorPickerView.flagView = BubbleFlag(this)
             builder.show()
         }
+
+        binding.tilPhone.editText?.addTextChangedListener(PhoneNumberFormattingTextWatcher())
     }
 
     private fun validate(): BusinessCard? {
